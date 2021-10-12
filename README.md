@@ -34,3 +34,8 @@ Sample API Implementations using open API maven plugin and vertical slice implem
 ```
 
 `refer customer.postman_collection.json for postman request`
+
+### Swagger Doc
+
+http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
+
