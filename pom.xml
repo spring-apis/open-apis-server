@@ -52,6 +52,27 @@
 			<artifactId>swagger-annotations</artifactId>
 			<version>1.6.2</version>
 		</dependency>
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+
+		</dependency>
+<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+<dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.8.8</version>
+</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 
 
 
@@ -70,20 +91,20 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<inputSpec>${project.basedir}/src/main/resources/static/account.yaml</inputSpec>
+							<tasks>
+								<echo>generating controller and delegate interface for
+									specification</echo>
+							</tasks>
+							<inputSpec>${project.basedir}/src/main/resources/static/customer.yaml</inputSpec>
 							<generatorName>spring</generatorName>
-							<library>spring-boot</library>
-							<modelNameSuffix>Dto</modelNameSuffix>
-							<generateApiTests>false</generateApiTests>
-							<generateModelTests>false</generateModelTests>
+							<apiPackage>com.ultradev.api</apiPackage>
+							<modelPackage>com.ultradev.model</modelPackage>
+							<supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
 							<configOptions>
-								<basePackage>com.ultradev.openapi</basePackage>
-								<modelPackage>com.ultradev.openapi.model</modelPackage>
-								<apiPackage>com.ultradev.openapi.api</apiPackage>
-								<configPackage>com.ultradev.openapi.config</configPackage>
-								<dateLibrary>java8</dateLibrary>
+
 								<delegatePattern>true</delegatePattern>
-								<interfaceOnly>true</interfaceOnly>
+								<performBeanValidation>true</performBeanValidation>
+								<useBeanValidation>true</useBeanValidation>
 							</configOptions>
 						</configuration>
 					</execution>

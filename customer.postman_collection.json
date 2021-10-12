@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "0318c6c0-f527-483f-956e-517bdbe77217",
+		"name": "customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerId\": 1,\r\n  \"name\": \"Shashank Singh\",\r\n  \"location\": \"New Jersey USA\",\r\n  \"email\": \"ultradev.nitc@gmail.com\",\r\n  \"address\": \"422 Robert Street\",\r\n  \"status\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v2/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v2",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
