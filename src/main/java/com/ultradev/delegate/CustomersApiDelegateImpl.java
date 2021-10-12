@@ -12,7 +12,7 @@ import com.ultradev.model.CreateCustomerResponse;
 import com.ultradev.model.Customer;
 
 @Component
-public class CustomerrsApiDelegateImpl implements CustomersApiDelegate{
+public class CustomersApiDelegateImpl implements CustomersApiDelegate{
 
 	/**
 	 * POST /customers : Add a new customer
