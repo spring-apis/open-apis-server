@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    password: password
+    url: jdbc:h2:mem:testdb
+    username: sa
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+springdoc:
+         swagger-ui:
+          enabled: true
+          url: /swagger-ui.html
+          urls:
+           - name: customers
+             url: /customer.yaml
+           
+          
